@@ -102,9 +102,10 @@
     background-size: cover;
 }
 .menu__link{
+    position: relative;
     display: block;
     border-radius: 20px;
-    margin: 15px;
+    margin: 15px 0;
     padding: 22px 0;
 
     background: url('./images/menu-button-1.png') no-repeat center 100%, 
@@ -116,4 +117,15 @@
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+}
+.menu__link[data-new="true"]::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    display: block;
+    width: 50px;
+    height: 20px;
+    background: url('./images/new.png') no-repeat;
+    background-size: cover;
 }
