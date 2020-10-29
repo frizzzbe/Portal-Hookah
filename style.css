@@ -1,4 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Neucha', cursive;
+}
+.main-header{
+    height: 100vh;
+    width: 100%;
+    background: url(./images/smoke.png) no-repeat,
+    #932E30;
+    background-size: 100%;
+}
+
+.main-header__manage{
+    padding-top: 34px;
+    display: flex;
+    justify-content: space-around;
+}
+.main-page{
+    width: 55px;
+    height: 55px;
+    background: url('./images/hookah.svg') no-repeat center;
+}
+.logo{
+
+}
+.cart{
+    position: relative;
+    border: none;
+    width: 60px;/*60*60*/
+    height: 60px;
+    background: url('./images/cart.svg') no-repeat center;
+    background-size: 50px 50px;
+    background-position: 0 100%;
+}
+.cart__count{
+    font-family: 'Arsenal', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #EFEFEF;
+    font-size: 24px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-color: #434343;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    padding-top: 0;
+    border-radius: 50%;
+}
+
+.main-content{
+    position: relative;
+    right: 0;
+    width: 84%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(46, 46, 46, 0.69) 14.06%, rgba(35, 35, 35, 0.69) 100%), 
+                url('./images/background.png');
+    border-radius: 50px 0px 0px 0px;
 }
