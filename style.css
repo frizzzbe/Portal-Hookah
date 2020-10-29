@@ -6,6 +6,9 @@
     font-family: 'Neucha', cursive;
 }
 .main-header{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     background: url(./images/smoke.png) no-repeat,
@@ -15,6 +18,7 @@
 
 .main-header__manage{
     padding-top: 34px;
+    padding-bottom: 19px;
     display: flex;
     justify-content: space-around;
 }
@@ -23,9 +27,7 @@
     height: 55px;
     background: url('./images/hookah.svg') no-repeat center;
 }
-.logo{
 
-}
 .cart{
     position: relative;
     border: none;
@@ -55,10 +57,63 @@
 
 .main-content{
     position: relative;
+    color: #EFEFEF;
     right: 0;
     width: 84%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(46, 46, 46, 0.69) 14.06%, rgba(35, 35, 35, 0.69) 100%), 
-                url('./images/background.png');
+    align-self: flex-end;
+    flex-grow: 1;
+    background: url('./images/background.png') 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50px 0px 0px 0px;
+    overflow-y: scroll;
+}
+
+.menu{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.menu__link:nth-child(2){
+    background: url('./images/menu-button-2.png') no-repeat center 100%, 
+                 #932E30;
+    background-size: cover;
+}
+.menu__link:nth-child(3){
+    background: url('./images/menu-button-3.png') no-repeat center 100%, 
+                 #932E30;
+    background-size: cover;
+}
+.menu__link:nth-child(4){
+    background: url('./images/menu-button-4.png') no-repeat center 100%, 
+                 #932E30;
+    background-size: cover;
+}
+.menu__link:nth-child(5){
+    background: url('./images/menu-button-5.png') no-repeat center 100%, 
+                 #932E30;
+    background-size: cover;
+}
+.menu__link{
+    display: block;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 22px 0;
+
+    background: url('./images/menu-button-1.png') no-repeat center 100%, 
+                 #932E30;
+    background-size: cover;
+    color: #EFEFEF;
+
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
 }
