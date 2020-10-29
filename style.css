@@ -27,6 +27,11 @@
     height: 55px;
     background: url('./images/hookah.svg') no-repeat center;
 }
+.main__link-back{
+    width: 55px;
+    height: 55px;
+    background: url('./images/back-arrow.svg') no-repeat center;
+}
 
 .cart{
     position: relative;
@@ -79,7 +84,10 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-
+.menu--center{
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .menu__link:nth-child(2){
     background: url('./images/menu-button-2.png') no-repeat center 100%, 
@@ -117,6 +125,7 @@
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
 }
 .menu__link[data-new="true"]::before{
     content: "";
