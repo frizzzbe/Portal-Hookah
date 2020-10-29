@@ -17,11 +17,46 @@
             <div class="menu">
                 <a href="#" class="menu__link">Меню</a>
                 <a href="#" class="menu__link" data-new="true">Игры</a>
-                <a href="#" class="menu__link">Позвать кальянщика</a>
-                <a href="#" class="menu__link">Позвать официанта</a>
+                <a href="#" class="menu__link" data-modal="hookah">Позвать кальянщика</a>
+                <a href="#" class="menu__link" data-modal="officiant">Позвать официанта</a>
                 <a href="#" class="menu__link">Оставить отзыв</a>
             </div>
         </main>
     </header>
+    <div class="modal-cont">
+        <div class="modal">
+            <button class="modal__close"></button>
+            <div class="modal__text">К вам уже идёт кальянщик!</div>
+        </div>
+    </div>
+<script defer>
+    let modalLink = document.querySelectorAll('.menu__link[data-modal]');
+    let modal = document.querySelector('.modal-cont');
+    let closeBtn = document.querySelector('.modal__close');
+    let modalText = document.querySelector('.modal__text');
+    modalLink.forEach(item =>{
+        item.addEventListener('click', (e)=>{
+            modal.style.display = "flex";
+            if(e.target.dataset.modal == "hookah"){
+                modalText.textContent = "К вам уже идет кальянщик!";
+            }else if(e.target.dataset.modal == "officiant"){
+                modalText.textContent = "К вам уже идет официант!";
+            }else{
+                modalText.textContent = "К вам скоро подойдут!";
+            }
+            
+        });
+    });
+
+    closeBtn.addEventListener('click', (e)=>{
+        modal.style.display = "";
+    });
+    modal.addEventListener('click', (e)=>{
+        if(!e.target.closest('.modal')){
+            modal.style.display = "";
+        }
+    });
+    
+</script>
 </body>
 </html>
