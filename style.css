@@ -36,17 +36,18 @@
 .main-nav{
     position: absolute;
     left: 0;
-    top: 60%; /*100% для 3 > эл-ов*/
+    top: 55%;
     z-index: 5;
     transform-origin: 0 0;
-    transform: rotate(-90deg) translate(25%, 25%);
-    max-width: 400px;
+    transform: rotate(-90deg) translate(-50%, 25%);
+    max-width: 80vh;
     display: flex;
     flex-direction: row-reverse;
     overflow-x: scroll;
     overflow-y: visible;
 }
-.main-nav a{
+.main-nav__link{
+    white-space: nowrap;
     position: relative;
     font-size: 34px;
     line-height: 37px;
@@ -223,7 +224,7 @@
 
 /* games */
 
-.games{
+.cards{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -234,7 +235,8 @@
     justify-content: flex-start;
 }
 
-.game{
+.game, .card{
+    font-weight: normal;
     position: relative;
     margin-top: 41px;
     width: 100%;
@@ -243,7 +245,8 @@
     background: #933032;
     border-radius: 50px 0px 0px 50px;
 }
-.game::before{
+.game::before, 
+.card::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -253,10 +256,12 @@
     border-radius: 50px 0px 0px 50px;
     border: 2px solid #EFEFEF;
 }
-.game:first-child{
+.game:first-child,
+.card:first-child{
     margin-top: 19px;
 }
 .game__title{
+    font-weight: normal;
     width: 107%;
     margin-left: 16px;
     margin-top: 20px;
@@ -294,4 +299,91 @@
 .game__property-value{
     margin-left: 5px;
     color: #FFFFFF;
+}
+
+/* drinks */
+
+.product-props{
+    margin-left: 8px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 23px;
+    display: flex;
+    width: 84%;
+    justify-content: space-between;
+}
+
+.product-type{
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding: 11px 15px;
+    color: #EFEFEF;
+    background: url('./images/menu-button-1.png'), #932E30;
+    background-size: cover;
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: 0.7;
+}
+.product-type--current{
+    opacity: 1;
+}
+.product-type:not(:first-child){
+    margin-left: 16px;
+}
+
+.card__info{
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+}
+.card__image{
+    border: 1.5px solid #EFEFEF;
+    width: 130px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border-radius: 50px 4px;
+}
+.card__title{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #EFEFEF;
+}
+.card__description{
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px 5px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #DFCECE;
+    
+    border: 1px solid #EFEFEF;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.card__price{
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #EFEFEF;
+}
+.card__submit{
+    position: relative;
+    display: block;
+    padding: 13px;
+    margin: 4px auto;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+    color: #EFEFEF;
+    background-color: transparent;
+    border: 2px solid #EFEFEF;
+    box-sizing: border-box;
+    border-radius: 50px;
 }

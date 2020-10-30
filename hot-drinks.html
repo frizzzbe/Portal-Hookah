@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Hookah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__manage">
+            <a href="./index.html" class="main__link-back"></a>
+            <img src="./images/logo.png" alt="логотип" class="logo">
+            <a href="./cart.html" class="cart"><div class="cart__count">1</div></a>
+        </div>
+        <nav class="main-nav">
+            <a href="./dishes.html" class="main-nav__link">Основные блюда</a>
+            <a href="#" class="main-nav__link main-nav__link--active">Напитки</a>
+            <a href="./desserts.html" class="main-nav__link">Десерты</a>
+        </nav>
+        <main class="main-content">
+            <div class="product-props">
+                <a href="./cold-drinks.html" class="product-type">Холодные напитки</a>
+                <a href="./hot-drinks.html" class="product-type product-type--current">Горячие напитки</a>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__info">
+                        <img src="./images/hot-tea-1.png" alt="Зеленый чай" class="card__image">
+                        <div class="card__info-cont">
+                            <h2 class="card__title">Зеленый китайский чай “Храм неба”</h2>
+                        </div>
+                    </div>
+                    <div class="card__price">500 ml / 30 грн</div>
+                    <button class="card__submit" type="submit">Заказать</button>
+                </div>
+                <div class="card">
+                    <div class="card__info">
+                        <img src="./images/hot-tea-2.png" alt="Зеленый чай" class="card__image">
+                        <div class="card__info-cont">
+                            <h2 class="card__title">Чай авторский “Цитрусовый”</h2>
+                            <p class="card__description">Чай зеленый, апельсин, лимон, грейпфрут, корица, кардамон</p>
+                        </div>
+                    </div>
+                    <div class="card__price">500 ml / 48 грн</div>
+                    <button class="card__submit" type="submit">Заказать</button>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="modal-cont">
+        <div class="modal">
+            <button class="modal__close"></button>
+            <div class="modal__text">К вам уже идёт кальянщик!</div>
+        </div>
+    </div>
+</body>
+</html>
