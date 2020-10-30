@@ -21,30 +21,31 @@
         </nav>
         <main class="main-content">
             <div class="product-props">
-                <a href="./cold-drinks.html" class="product-type">Холодные напитки</a>
-                <a href="./hot-drinks.html" class="product-type product-type--current">Горячие напитки</a>
+                <a href="./cold-drinks.html" class="product-type product-type--current">Холодные напитки</a>
+                <a href="./hot-drinks.html" class="product-type">Горячие напитки</a>
             </div>
-            <div class="cards">
+            <div class="cards cards-cold-drinks">
                 <div class="card">
                     <div class="card__info">
-                        <img src="./images/hot-tea-1.png" alt="Зеленый чай" class="card__image">
+                        <img src="./images/cold-tea-1.png" alt="Зеленый чай" class="card__image">
                         <div class="card__info-cont">
-                            <h2 class="card__title">Зеленый китайский чай “Храм неба”</h2>
+                            <h2 class="card__title">Лимонад в ассортименте</h2>
+                            <p class="card__description">Лимонад на основе свежей мяты, лимона, и газировки Sprite с добавлением сиропа на ваш выбор. (Уточнять у официанта.)</p>
                         </div>
                     </div>
-                    <div class="card__price">500 ml / <span>30 грн</span></div>
-                    <button class="card__submit" type="submit">Заказать</button>
+                    <div class="card__price">400 ml / <span>35 грн</span></div>
+                    <button class="card__submit" type="button">Заказать</button>
                 </div>
                 <div class="card">
                     <div class="card__info">
-                        <img src="./images/hot-tea-2.png" alt="Зеленый чай" class="card__image">
+                        <img src="./images/cold-tea-2.png" alt="Зеленый чай" class="card__image">
                         <div class="card__info-cont">
-                            <h2 class="card__title">Чай авторский “Цитрусовый”</h2>
-                            <p class="card__description">Чай зеленый, апельсин, лимон, грейпфрут, корица, кардамон</p>
+                            <h2 class="card__title">Милкшейк в ассортименте</h2>
+                            <p class="card__description">Молочный коктейль из 100% - процентного пломбира, молока, льда, и сиропа на ваш выбор. (Уточнять у официанта)</p>
                         </div>
                     </div>
-                    <div class="card__price">500 ml / <span>48 грн</span></div>
-                    <button class="card__submit" type="submit">Заказать</button>
+                    <div class="card__price">400 ml / <span>40 грн</span></div>
+                    <button class="card__submit" type="button">Заказать</button>
                 </div>
             </div>
         </main>
@@ -59,27 +60,24 @@
                 <div class="count__current">1</div>
                 <div class="count__increment"></div>
             </div>
-            <div class="order__addons order__addons--reverse">
-                <button class="card__submit card__submit--order" type="submit">Подтвердить</button>
-                <textarea name="" id="comment" cols="30" rows="1" class="order__comment order__comment-area" placeholder="Добавить комментарий"></textarea>
+            <div class="order__addons">
                 <div class="order__comment-add">
                     <div class="order__comment" type="text" name="" id="">Добавить комментарий</div>
                 </div>
+                <textarea name="" id="comment" cols="30" rows="1" class="order__comment order__comment-area" placeholder="Добавить комментарий"></textarea>
+                <div class="ice">
+                    <div class="ice__name">Добавить льда</div>
+                    <div class="count count--dark">
+                        <div class="count__decrement"></div>
+                        <div class="count__current">1</div>
+                        <div class="count__increment"></div>
+                    </div>
+                </div>
                 <div class="order__price">Цена: 48 грн</div>
+                <button class="card__submit card__submit--order" type="submit">Подтвердить</button>
             </div>
         </div>
     </div>
-<!-- <script defer>
-    let modal = document.querySelector('.modal-cont');
-    let modalText = document.querySelector('.modal__text');
-
-    modal.addEventListener('click', (e)=>{
-        if(!e.target.closest('.modal')){
-            modal.style.display = "none";
-        }
-    });
-    
-</script> -->
 <script src="./product.js" defer></script>
 </body>
 </html>
