@@ -6,6 +6,11 @@ let addCommentArea = document.querySelector('#comment');
 let cardSubmit = document.querySelectorAll('.card__submit');
 let count = document.querySelectorAll('.count');
 
+let submit = document.querySelector('.card__submit--order');
+let response = document.querySelector('.modal-cont--response');
+let modalResponse = response.querySelector('.modal--response');
+let responseClose = response.querySelector('.modal__close');
+
 cardSubmit.forEach(item =>{
     item.addEventListener('click', ()=>{
         let currentOrder = item.closest('.card'),
@@ -57,4 +62,27 @@ addCommentArea.addEventListener('blur', (e)=>{
         addComment.style.display = "none";
         addCommentArea.style.display = "block";
     }
+});
+
+submit.addEventListener('click', ()=>{
+    let countItems = document.querySelector('#items');
+    let responseText = modalResponse.querySelector('.modal__text');
+    modal.style.display = "none";
+    if(Number(countItems.textContent) > 0){
+        modalResponse.classList.remove('modal--error');
+        responseText.textContent = "Ваш заказ был успешно оформлен!";
+    }else{
+        modalResponse.classList.add('modal--error');
+        responseText.textContent = "При заказе произошла ошибка, повторите попытку.";
+    }
+
+    response.style.display = "flex";
+});
+response.addEventListener('click', (e)=>{
+    if(!e.target.closest('.modal')){
+        response.style.display = "none";
+    }
+});
+responseClose.addEventListener('click', ()=>{
+    response.style.display = "none";
 });

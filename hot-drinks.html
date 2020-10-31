@@ -56,11 +56,11 @@
             <img class="order__image" src="./images/hot-tea-2.png" alt="Цитрусовый чай">
             <div class="count">
                 <div class="count__decrement"></div>
-                <div class="count__current">1</div>
+                <div class="count__current" id="items">1</div>
                 <div class="count__increment"></div>
             </div>
             <div class="order__addons order__addons--reverse">
-                <button class="card__submit card__submit--order" type="submit">Подтвердить</button>
+                <button class="card__submit--order" type="submit">Подтвердить</button>
                 <textarea name="" id="comment" cols="30" rows="1" class="order__comment order__comment-area" placeholder="Добавить комментарий"></textarea>
                 <div class="order__comment-add">
                     <div class="order__comment" type="text" name="" id="">Добавить комментарий</div>
@@ -69,17 +69,12 @@
             </div>
         </div>
     </div>
-<!-- <script defer>
-    let modal = document.querySelector('.modal-cont');
-    let modalText = document.querySelector('.modal__text');
-
-    modal.addEventListener('click', (e)=>{
-        if(!e.target.closest('.modal')){
-            modal.style.display = "none";
-        }
-    });
-    
-</script> -->
+    <div class="modal-cont modal-cont--response">
+        <div class="modal modal--response">
+            <button class="modal__close"></button>
+            <div class="modal__text">Ваш заказ был успешно оформлен!</div>
+        </div>
+    </div>
 <script src="./product.js" defer></script>
 </body>
 </html>
