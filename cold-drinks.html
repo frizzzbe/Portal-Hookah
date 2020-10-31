@@ -57,7 +57,7 @@
             <img class="order__image" src="./images/hot-tea-2.png" alt="Цитрусовый чай">
             <div class="count">
                 <div class="count__decrement"></div>
-                <div class="count__current">1</div>
+                <div class="count__current" id="items">1</div>
                 <div class="count__increment"></div>
             </div>
             <div class="order__addons">
@@ -74,8 +74,14 @@
                     </div>
                 </div>
                 <div class="order__price">Цена: 48 грн</div>
-                <button class="card__submit card__submit--order" type="submit">Подтвердить</button>
+                <button class="card__submit--order" type="submit">Подтвердить</button>
             </div>
+        </div>
+    </div>
+    <div class="modal-cont modal-cont--response">
+        <div class="modal modal--response">
+            <button class="modal__close"></button>
+            <div class="modal__text">Ваш заказ был успешно оформлен!</div>
         </div>
     </div>
 <script src="./product.js" defer></script>

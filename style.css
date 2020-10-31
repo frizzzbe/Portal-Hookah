@@ -337,6 +337,7 @@
 .card__info{
     width: 110%;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 }
 .card__image{
@@ -347,6 +348,7 @@
     border-radius: 50px 4px;
 }
 .card__title{
+    width: 98%;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;

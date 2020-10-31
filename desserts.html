@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Hookah</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./modal-order.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__manage">
+            <a href="./drinks.html" class="main__link-back"></a>
+            <img src="./images/logo.png" alt="логотип" class="logo">
+            <a href="./cart.html" class="cart"><div class="cart__count">1</div></a>
+        </div>
+        <nav class="main-nav">
+            <a href="./dishes.html" class="main-nav__link">Основные блюда</a>
+            <a href="./cold-drinks.html" class="main-nav__link">Напитки</a>
+            <a href="#" class="main-nav__link main-nav__link--active">Десерты</a>
+        </nav>
+        <main class="main-content">
+            <div class="cards">
+                <div class="card">
+                    <div class="card__info">
+                        <img src="./images/dessert-1.png" alt="Зеленый чай" class="card__image">
+                        <div class="card__info-cont">
+                            <h2 class="card__title">Маффин шоколадный</h2>
+                            <p class="card__description">Мягкий маффин из шоколадного теста, посыпанный шоколадной крошкой</p>
+                        </div>
+                    </div>
+                    <div class="card__price">90 g / <span>27 грн</span></div>
+                    <button class="card__submit" type="submit">Заказать</button>
+                </div>
+                <div class="card">
+                    <div class="card__info">
+                        <img src="./images/dessert-2.png" alt="Зеленый чай" class="card__image">
+                        <div class="card__info-cont">
+                            <h2 class="card__title">Бельгийская вафля</h2>
+                            <p class="card__description">Бельгийская вафля с шариком пломбир и шоколадный топпингом</p>
+                        </div>
+                    </div>
+                    <div class="card__price">220 g / <span>80 грн</span></div>
+                    <button class="card__submit" type="submit">Заказать</button>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="modal-cont">
+        <div class="modal order">
+            <p class="order__name">Ваш заказ:</p>
+            <h3 class="order__title">Чай авторский “Цитрусовый”</h3>
+            <img class="order__image" src="./images/hot-tea-2.png" alt="Цитрусовый чай">
+            <div class="count">
+                <div class="count__decrement"></div>
+                <div class="count__current" id="items">1</div>
+                <div class="count__increment"></div>
+            </div>
+            <div class="order__addons order__addons--reverse">
+                <button class="card__submit--order" type="submit">Подтвердить</button>
+                <textarea name="" id="comment" cols="30" rows="1" class="order__comment order__comment-area" placeholder="Добавить комментарий"></textarea>
+                <div class="order__comment-add">
+                    <div class="order__comment" type="text" name="" id="">Добавить комментарий</div>
+                </div>
+                <div class="order__price">Цена: 48 грн</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-cont modal-cont--response">
+        <div class="modal modal--response">
+            <button class="modal__close"></button>
+            <div class="modal__text">Ваш заказ был успешно оформлен!</div>
+        </div>
+    </div>
+<script src="./product.js" defer></script>
+</body>
+</html>
