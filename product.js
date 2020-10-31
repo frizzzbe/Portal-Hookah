@@ -2,8 +2,6 @@ let modal = document.querySelector('.modal-cont');
 let modalText = document.querySelector('.modal__text');
 let addComment = document.querySelector('.order__comment-add');
 let addCommentArea = document.querySelector('#comment');
-let addSauce = document.querySelector('.order__sauce-add');
-let addSauceArea = document.querySelector('.order__sauce-cont');
 
 let cardSubmit = document.querySelectorAll('.card__submit');
 let count = document.querySelectorAll('.count');
@@ -65,10 +63,15 @@ addCommentArea.addEventListener('blur', (e)=>{
         addCommentArea.style.display = "block";
     }
 });
-addSauce.addEventListener('click', ()=>{
-    addSauce.classList.add('order__sauce-add--opened');
-    addSauceArea.style.display = "block";
-});
+if(document.querySelector('.order__sauce-add')){
+    let addSauce = document.querySelector('.order__sauce-add');
+    let addSauceArea = document.querySelector('.order__sauce-cont');
+    addSauce.addEventListener('click', ()=>{
+        addSauce.classList.add('order__sauce-add--opened');
+        addSauceArea.style.display = "block";
+    });
+}
+
 
 submit.addEventListener('click', ()=>{
     let countItems = document.querySelector('#items');

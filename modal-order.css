@@ -1,5 +1,5 @@
 .modal-cont{
-    display: flex;/**/
+    /* display: flex; */
 }
 .modal-cont--response{
     display: none;
