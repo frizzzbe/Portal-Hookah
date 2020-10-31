@@ -1,5 +1,5 @@
 .modal-cont{
-
+    display: flex;/**/
 }
 .modal-cont--response{
     display: none;
@@ -112,14 +112,16 @@
     text-align: center;
     color: #EFEFEF;
 }
-.order__comment-add{
+.order__comment-add,
+.order__sauce-add{
     position: relative;
     display: block;
     margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
 }
-.order__comment-add::before{
+.order__comment-add::before,
+.order__sauce-add::before{
     content: '+';
     font-size: 22px;
     font-weight: bold;
@@ -131,7 +133,11 @@
     right: 8px;
     color: #434343;
 }
+.order__sauce-add--opened::before{
+    content: '-';
+}
 .order__comment,
+.order__sauce,
 .ice{
     /* font-size: 14px;
     line-height: 18px; */
@@ -157,12 +163,61 @@
     resize: vertical;
     height: 127px;
 }
+.order__sauce{
+    margin-bottom: 0;
+}
 .ice{
     padding-right: 5px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.order__sauce-cont{
+    background-color: #EFEFEF;
+    border: 2px solid #EFEFEF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    display: none;
+}
+.order__sauce-item{
+    margin: 0 auto;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #434343;
+
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order__sauce-item .count__current{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #555555;
+}
+.order__sauce-title{
+    text-align: left;
+}
+
+.order__sauce-cont .count{
+    width: 50px;
+}
+.order__sauce-cont .count__current{
+    margin: 0 5px;
+}
+.order__sauce-cont .count__decrement,
+.order__sauce-cont .count__increment{
+    width: 15px;
+    height: 15px;
 }
 
 .card__submit--order{
