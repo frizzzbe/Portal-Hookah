@@ -347,6 +347,9 @@
     box-sizing: border-box;
     border-radius: 50px 4px;
 }
+.cards-cold-drinks .card__image{
+    width: 90px;
+}
 .card__title{
     width: 98%;
     font-weight: normal;

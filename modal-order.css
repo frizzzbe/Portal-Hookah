@@ -46,6 +46,9 @@
 }
 
 .order__image{
+    height: 144px;
+    max-width: 90%;
+    object-fit: cover;
     margin-top: 10px;
     border: 1.5px solid #EFEFEF;
     box-sizing: border-box;
@@ -145,8 +148,10 @@
     margin: 10px 0;
     font-size: 24px;
     color: #434343;
+    text-align: left;
 
     padding: 13px;
+    padding-top: 8px;
     padding-right: 20px;
     box-sizing: border-box;
     width: 100%;
@@ -167,6 +172,8 @@
     margin-bottom: 0;
 }
 .ice{
+    padding: 0;
+    padding-left: 13px;
     padding-right: 5px;
     width: 100%;
     display: flex;
