@@ -104,6 +104,7 @@
     color: #EFEFEF;
     right: 0;
     width: 84%;
+    padding-bottom: 30px;
     align-self: flex-end;
     flex-grow: 1;
     background: url('./images/background.png') 100%;
